@@ -28,8 +28,8 @@ public class CerraduraController {
     public Map<String, Object> obtenerCerraduraEstrella(@PathVariable int n) {
         Map<String, String> kleeneResult = cerraduraService.kleeneCerradura(n);
         Map<String, Object> response = new HashMap<>();
-        //response.put("titulo", "Cerradura de Kleene (Σ^*)");
-        //response.put("mensaje", "Este es el conjunto de cadenas obtenidas a partir de la cerradura de Kleene.");
+        //response.put("titulo", "Cerradura de Estrella (Σ^*)");
+        response.put("mensaje", "Este es el conjunto de cadenas obtenidas a partir de la cerradura Estrella.");
         response.put("resultado", kleeneResult);
         return response;
     }
@@ -45,7 +45,7 @@ public class CerraduraController {
         Map<String, String> positivaResult = cerraduraService.kleeneCerraduraPositiva(n);
         Map<String, Object> response = new HashMap<>();
         //response.put("titulo", "Cerradura Positiva (Σ^+)");
-        //response.put("mensaje", "Este es el conjunto de cadenas obtenidas a partir de la cerradura positiva.");
+        response.put("mensaje", "Este es el conjunto de cadenas obtenidas a partir de la cerradura positiva.");
         response.put("resultado", positivaResult);
         return response;
     }
